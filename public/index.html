@@ -5,20 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class'
+      }
+    </script>
    
 </head>
-<body>
-    <nav class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md shadow-md z-50 ">
+<body class="dark:bg-gray-900">
+    <nav class="fixed top-0 left-0 right-0 bg-white/80 dark:bg-gray-800/80  backdrop-blur-md shadow-md z-50 ">
         <ul class="flex items-center justify-between px-8 py-4 max-w-7xl mx-auto">
           <li>
             <a href="#home" class="text-yellow-500 font-extrabold text-lg tracking-wide mr-4">Chahed Ammar</a>
           </li>
           <div class="flex space-x-6 text-sm font-medium">
-            <li><a href="#home" class="text-gray-600 hover:text-yellow-500 transition active:text-yellow-500">Home</a></li>
-            <li><a href="#about" class="text-gray-600 hover:text-yellow-500 transition">About</a></li>
-            <li><a href="#skills" class="text-gray-600 hover:text-yellow-500 transition">Skills</a></li>
-            <li><a href="#projects" class="text-gray-600 hover:text-yellow-500 transition">Projects</a></li>
-            <li><a href="#contact" class="text-gray-600 hover:text-yellow-500 transition">Contact</a></li>
+            <li><a href="#home" class="text-gray-600  dark:text-gray-300 hover:text-yellow-500 transition active:text-yellow-500">Home</a></li>
+            <li><a href="#about" class="text-gray-600  dark:text-gray-300 hover:text-yellow-500 transition">About</a></li>
+            <li><a href="#skills" class="text-gray-600  dark:text-gray-300 hover:text-yellow-500 transition">Skills</a></li>
+            <li><a href="#projects" class="text-gray-600  dark:text-gray-300 hover:text-yellow-500 transition">Projects</a></li>
+            <li><a href="#contact" class="text-gray-600  dark:text-gray-300 hover:text-yellow-500 transition">Contact</a></li>
+            <button id="toggleDark" class="dark:text-gray-200">dark Mode</button>
+            
+              
             
           </div>
         </ul>
@@ -26,13 +34,13 @@
       
     <main >
         <section id="home" >
-            <h1 class="text-4xl font-bold mt-[100px] mb-4 text-center">
+            <h1 class="text-4xl font-bold mt-[100px] mb-4 text-center dark:text-white">
                 Hi, I'm
                 <span class="bg-gradient-to-r from-yellow-500 via-amber-400 to-yellow-600 bg-clip-text text-transparent ">
                   Chahed Ammar
                 </span>
               </h1>
-            <p class="text-center font-medium">21-year-old CS student | Passionate about frontend and hands-on learning</p>
+            <p class="text-center font-medium dark:text-white">21-year-old CS student | Passionate about frontend and hands-on learning</p>
             <div class="mt-4 flex flex-row mr-4  items-center justify-center">
               <a href="#contact" class="border border-yellow-500 text-yellow-500 px-4 py-2 rounded-md transition-all duration-300
               hover:ring-2 hover:ring-yellow-400 hover:shadow-yellow-400 hover:shadow-md mt-7 flex justify-center ml-7">Contact Me</a>
@@ -140,12 +148,12 @@
         
         <div class="flex-1 cursor-pointer hover:scale-105 hover:-translate-y-1 hover:shadow-lg transition-transform duration-300 rounded-lg border border-gray-300 p-4 min-h-[400px] flex flex-col">
           <img src="./assets/codebreak.png" alt="CodeBreak" class="w-full h-[250px] object-contain mb-4">
-          <h2 class="font-bold text-xl text-gray-800 mb-2">CodeBreak</h2>
-          <p class="text-gray-600 mb-4 flex-grow">Hone your debugging skills with AI-generated and custom-coded programming puzzles.</p>
+          <h2 class="font-bold text-xl text-gray-800 mb-2  dark:text-yellow-400 ">CodeBreak</h2>
+          <p class="text-gray-600 mb-4 flex-grow  dark:text-gray-300 ">Hone your debugging skills with AI-generated and custom-coded programming puzzles.</p>
           <ul class="flex space-x-2 text-sm font-medium mb-4">
-            <li class="bg-transparent  rounded-md border border-orange-400 px-3 py-1">HTML</li>
-            <li class="bg-transparent rounded-md border border-blue-500 px-3 py-1">tailwindcss</li>
-            <li class="bg-transparent rounded-md border border-yellow-500 px-3 py-1">React</li>
+            <li class="bg-transparent  rounded-md border border-orange-400 px-3 py-1 dark:text-white">HTML</li>
+            <li class="bg-transparent rounded-md border border-blue-500 px-3 py-1 dark:text-white">tailwindcss</li>
+            <li class="bg-transparent rounded-md border border-yellow-500 px-3 py-1 dark:text-white">React</li>
           </ul>
           <div class="flex space-x-4 mt-auto">
             <a href="https://github.com/ChahedAmmar/CodeBreak" target="_blank"><img src="./assets/github-mark.png" class="w-[30px] h-[30px]"></a>
@@ -154,12 +162,12 @@
       
         <div class="flex-1 cursor-pointer hover:scale-105 hover:-translate-y-1 hover:shadow-lg transition-transform duration-300 rounded-lg border border-gray-300 p-4 min-h-[400px] flex flex-col">
           <img src="./assets/brainburst.png" alt="BrainBurst" class="w-full h-[250px] object-contain mb-4">
-          <h2 class="font-bold text-xl text-gray-800 mb-2">BrainBurst</h2>
-          <p class="text-gray-600 mb-4 flex-grow">A curated set of quizzes designed to test your foundational knowledge across multiple languages.</p>
+          <h2 class="font-bold text-xl text-gray-800 mb-2  dark:text-yellow-400 ">BrainBurst</h2>
+          <p class="text-gray-600 mb-4 flex-grow  dark:text-gray-300 ">A curated set of quizzes designed to test your foundational knowledge across multiple languages.</p>
           <ul class="flex space-x-2 text-sm font-medium mb-4">
-            <li class="bg-transparent  rounded-md border border-orange-400 px-3 py-1">HTML</li>
-            <li class="bg-transparent rounded-md border border-blue-500 px-3 py-1">CSS</li>
-            <li class="bg-transparent rounded-md border border-yellow-500 px-3 py-1">JavaScript</li>
+            <li class="bg-transparent  rounded-md border border-orange-400 px-3 py-1 dark:text-white">HTML</li>
+            <li class="bg-transparent rounded-md border border-blue-500 px-3 py-1 dark:text-white">CSS</li>
+            <li class="bg-transparent rounded-md border border-yellow-500 px-3 py-1 dark:text-white">JavaScript</li>
           </ul>
           <div class="flex space-x-4 mt-auto">
             <a href="https://brain-burst-quizz.netlify.app/" target="_blank" ><img class="w-[30px] h-[30px]" src="./assets/replay.png"></a>
@@ -169,12 +177,12 @@
       
         <div class="flex-1 cursor-pointer hover:scale-105 hover:-translate-y-1 hover:shadow-lg transition-transform duration-300 rounded-lg border border-gray-300 p-4 min-h-[400px] flex flex-col">
           <img src="./assets/MealMuse.png" alt="MealMuse" class="w-full h-[250px] object-contain  mb-4">
-          <h2 class="font-bold text-xl text-gray-800 mb-2">MealMuse</h2>
-          <p class="text-gray-600 mb-4 flex-grow">Discover new recipes daily using an AI-powered meal inspiration generator.</p>
+          <h2 class="font-bold text-xl text-gray-800  dark:text-yellow-400  mb-2">MealMuse</h2>
+          <p class="text-gray-600 mb-4 flex-grow  dark:text-gray-300">Discover new recipes daily using an AI-powered meal inspiration generator.</p>
           <ul class="flex space-x-2 text-sm font-medium mb-4">
-            <li class="bg-transparent  rounded-md border border-orange-400 px-3 py-1">HTML</li>
-            <li class="bg-transparent rounded-md border border-blue-500 px-3 py-1">CSS</li>
-            <li class="bg-transparent rounded-md border border-yellow-500 px-3 py-1">React</li>
+            <li class="bg-transparent  rounded-md border border-orange-400 px-3 py-1 dark:text-white ">HTML</li>
+            <li class="bg-transparent rounded-md border border-blue-500 px-3 py-1 dark:text-white ">CSS</li>
+            <li class="bg-transparent rounded-md border border-yellow-500 px-3 py-1 dark:text-white ">React</li>
           </ul>
           <div class="flex space-x-4 mt-auto">
             <a href="https://github.com/ChahedAmmar/MealMuse" target="_blank"><img src="./assets/github-mark.png" class="w-[30px] h-[30px]"></a>
@@ -183,12 +191,12 @@
       
         <div class="flex-1 cursor-pointer hover:scale-105 hover:-translate-y-1 hover:shadow-lg transition-transform duration-300 rounded-lg border border-gray-300 p-4 min-h-[400px] flex flex-col">
           <img src="./assets/unchaos.png" alt="Unchaos" class="w-full h-[250px] object-contain  mb-4">
-          <h2 class="font-bold text-xl text-gray-800 mb-2">Unchaos</h2>
-          <p class="text-gray-600 mb-4 flex-grow">TextBuddy is a handy Chrome extension that helps you engage with web content better. Select any text to quickly summarize, translate, or listen with AI tools. Plus, customize fonts and enable features like colorblind mode for a personalized browsing experience.</p>
+          <h2 class="font-bold text-xl text-gray-800 mb-2  dark:text-yellow-400 ">Unchaos</h2>
+          <p class="text-gray-600 mb-4 flex-grow dark:text-gray-300">TextBuddy is a handy Chrome extension that helps you engage with web content better. Select any text to quickly summarize, translate, or listen with AI tools. Plus, customize fonts and enable features like colorblind mode for a personalized browsing experience.</p>
           <ul class="flex space-x-2 text-sm font-medium mb-4">
-            <li class="bg-transparent  rounded-md border border-orange-400 px-3 py-1">HTML</li>
-            <li class="bg-transparent rounded-md border border-blue-500 px-3 py-1">CSS</li>
-            <li class="bg-transparent rounded-md border border-yellow-500 px-3 py-1">JavaScript</li>
+            <li class="bg-transparent  rounded-md border border-orange-400 px-3 py-1 dark:text-white ">HTML</li>
+            <li class="bg-transparent rounded-md border border-blue-500 px-3 py-1 dark:text-white ">CSS</li>
+            <li class="bg-transparent rounded-md border border-yellow-500 px-3 py-1 dark:text-white ">JavaScript</li>
           </ul>
           <a href="https://github.com/ChahedAmmar/TextBuddy" target="_blank" ><img src="./assets/github-mark.png" class="w-[30px] h-[30px]"></a>
         </div>
@@ -197,7 +205,7 @@
       <h1 class="font-bold text-yellow-500 text-3xl text-center mt-16 mb-8">Contact Me</h1>
 
       <section id="contact" class="flex flex-col items-center gap-4 py-8 max-w-3xl mx-auto px-4 text-center">
-        <p class="text-gray-700">
+        <p class="text-gray-700  dark:text-gray-300">
           If you want to get in touch, feel free to reach out via email or connect with me on LinkedIn.
         </p>
         <ul class=" flex  justify-row space-x-4">
@@ -214,9 +222,9 @@
           </li>
         </ul>
       </section>
-      <footer class="w-full bg-white shadow-inner py-6 px-4 text-center text-gray-600">
+      <footer class="w-full bg-white dark:bg-gray-800 dark:text-gray-300 shadow-inner py-6 px-4 text-center text-gray-600">
         <div class="max-w-3xl mx-auto flex flex-col items-center gap-2">
-          <p>&copy; 2025 <span class="font-semibold text-gray-800">Chahed Ammar</span>. All rights reserved.</p>
+          <p>&copy; 2025 <span class="font-semibold text-gray-800  dark:text-gray-300 ">Chahed Ammar</span>. All rights reserved.</p>
           <p>Made with ❤️ using <span class="font-medium text-blue-600">HTML</span>, <span class="font-medium text-teal-500">Tailwind CSS</span>, and <span class="font-medium text-yellow-500">JavaScript</span>.</p>
         </div>
       </footer>
